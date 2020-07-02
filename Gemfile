@@ -21,6 +21,14 @@ group :development do
   gem 'web-console',           '3.5.1'
 end
 
+group :test do
+  gem 'guard',                    '2.16.2'
+  gem 'guard-minitest',           '2.4.4'
+  gem 'minitest',                 '5.10.3'
+  gem 'minitest-reporters',       '1.1.14'
+  gem 'rails-controller-testing', '1.0.2'
+end
+
 group :production do
   gem 'pg', '0.20.0'
 end
