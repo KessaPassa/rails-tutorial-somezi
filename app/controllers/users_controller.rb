@@ -1,11 +1,11 @@
 class UsersController < ApplicationController
 
+  def index
+    @users = User.all
+  end
+
   def show
-    @user = if params[:id]
-              User.find(params[:id])
-            else
-              User.find(params[:format])
-            end
+    @user = User.find(params[:id])
   end
 
   def new
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
     if @user.save
       log_in @user
       flash[:success] = 'Welcome to the Sample App!'
-      redirect_to users_url(@user)
+      redirect_to @user
     else
       render 'new'
     end
