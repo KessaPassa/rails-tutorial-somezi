@@ -3,10 +3,12 @@ source 'https://rubygems.org'
 gem 'bcrypt', '3.1.12'
 gem 'bootstrap-sass', '3.4.1'
 gem 'bootstrap-will_paginate', '1.0.0'
+gem 'carrierwave', '1.2.2'
 gem 'coffee-rails', '4.2.2'
 gem 'faker', '1.7.3'
 gem 'jbuilder', '2.7.0'
 gem 'jquery-rails', '4.3.1'
+gem 'mini_magick', '4.7.0'
 gem 'puma', '3.12.6'
 gem 'rails', '5.1.6'
 gem 'sass-rails', '5.0.6'
@@ -36,6 +38,7 @@ end
 
 group :production do
   gem 'pg', '0.20.0'
+  gem 'fog', '1.42'
 end
 
 # Windows環境ではtzinfo-dataというgemを含める必要があります
